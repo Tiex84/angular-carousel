@@ -1,0 +1,12 @@
+<div class="carousel">
+    <ng-container *ngFor="let image of images; let i = index">
+        <img *ngIf="i === currentImage" class="image" [src]="image.src" @carouselAnimation />
+    </ng-container>
+
+    <button class="control prev" (click)="onPreviousClick()">
+        <fa-icon [icon]="faChevronLeft"></fa-icon>
+    </button>
+    <button class="control next" (click)="onNextClick()">
+        <fa-icon [icon]="faChevronRight"></fa-icon>
+    </button>
+</div>
